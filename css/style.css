@@ -532,15 +532,30 @@ body {
 
 /* 왼쪽 프로필 카드 설정 */
 .about-profile .profile-card {
+    display: block;
+    /* a 태그를 블록 요소로 설정 */
     width: 530px;
-    /* 이미지 크기에 맞춰 조절 */
-    /* 이미지 자체에 여백과 그림자가 있다면 배경색을 투명하게 하거나 조절하세요 */
+    text-decoration: none;
+    /* 링크 밑줄 제거 */
+    overflow: hidden;
+    /* 커질 때 영역을 넘지 않게 하려면 유지, 아니면 삭제 */
+    transition: transform 0.3s ease-in-out;
+    /* 부드러운 변화를 위한 설정 */
+}
+
+/* 마우스를 올렸을 때(Hover) 효과 */
+.about-profile .profile-card:hover {
+    transform: scale(1.05);
+    /* 5% 정도 크기 확대 */
 }
 
 .profile-card img {
     width: 100%;
     height: auto;
+    display: block;
 }
+
+/* ---------------------------------------------------- */
 
 /* 오른쪽 소개글 설정 */
 .about-info {
